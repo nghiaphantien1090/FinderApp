@@ -1,0 +1,24 @@
+  CSSStyleDeclaration=window.getComputedStyle(ref.current as HTMLElement)['width']
+  before:-inset-x-0 max-md:before:absolute
+                before:h-[${428}px] max-md:before:bg-slate-700  
+
+                                <h5 className="text-[#404145] font-semibold pb-5" onClick={e=>handleShow()}>
+                                    {Conts.Content}
+                                </h5>
+                                {
+                                    <ul style={{visibility:`${show?'hidden':'visible'}`}}>
+                                        {
+                                    Conts.List.map(item => {
+                                        return(
+                                        <li className="pb-4 text-[#74767e] cursor-pointer hover:underline
+                                       hover:underline-offset-2 
+                                        ">
+                                            <a>
+                                                {item}
+                                            </a>
+                                        </li>
+                                        )
+                                    })
+                                        }
+                                    </ul>
+                                }

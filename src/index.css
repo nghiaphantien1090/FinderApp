@@ -1,0 +1,78 @@
+  @import url('https://fonts.cdnfonts.com/css/domaine-display');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-line-clamp: 2
+}
+@layer components{
+  .maxWidthContainer{
+     @apply sm:px-8 md:px-8 lg:px-8 px-8 wideWraper mx-auto overflow-hidden 
+  }
+  .wideWraper{
+    @apply max-w-[1400px]
+  }
+  .h-bg-hero{
+    @apply h-[680px]
+  }
+  .navbar{
+    @apply h-20
+  }
+  .background-img{
+    @apply before:md:h-[680px] before:-z-10  before:inset-x-0 before:absolute
+     before:object-cover before:bg-auto before:h-[500px]  before:bg-slate-700  
+  }  
+  .fontSearch{
+    font-family: 'Domaine Display'
+  }
+  .fontDomainDisplay{
+    font-family: 'Domaine Display'
+  }
+  .primaryBtn{
+    @apply bg-green-600 text-white w-auto px-6 py-3 rounded-md
+  }
+  .fadeNavigator{
+    @apply -z-10
+  }
+  .hover-underline{
+    @apply after:absolute after:w-[40%]  after:h-[1px] after:top-12 after:bg-slate-500
+    after:left-10 hover:after:bg-red-500
+    hover:after:ease-in-out
+    
+  }
+  
+}
+@layer base{
+  button,input{
+    @apply outline-none
+  }  
+}
+body {
+}
+.bg-color{
+  background-color: #022402;
+}
+.hideScroll{
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px; 
+}
+.show-lists {
+  visibility: visible;
+  transition: all  1s ease-in;
+  height: 100%;
+}
+
+.show-lists.hidden-lists {
+  visibility: hidden;
+  transition: all  1s ease-out;
+  height: 100%;
+}
